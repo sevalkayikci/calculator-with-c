@@ -1,52 +1,36 @@
-# Prerequisites
-*.d
+#include<stdio.h>
+#include<math.h>
+int main(void)
+{
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+	int num1, num2;
+	char operation;
 
-# Linker output
-*.ilk
-*.map
-*.exp
+	printf("enter operator : ");
+	scanf_s("%c", &operation);
+	printf("enter num1:");
+	scanf_s("%d", &num1);
+	printf("enter num2:");
+	scanf_s("%d", &num2);
+	
 
-# Precompiled Headers
-*.gch
-*.pch
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+	switch (operation)
+	{
+	case '+':
+		 printf("%d + %d = %d", num1, num2, num1 + num2);
+		break;
+	case '-':
+		printf("%d - %d = %d", num1, num2, num1 - num2);
+		break;
+	case '*':
+		printf("%d * %d = %d", num1, num2, num1 * num2);
+		break;
+	case '/':
+		printf("%d / %d = %d", num1, num2, num1 / num2);
+		break;
+	}
+	
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+	return 0;
+}
